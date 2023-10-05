@@ -22,14 +22,14 @@ int main()
     {
         //On for 500ms
         greenLED = 1;
-        buzz.playTone("F");
+        buzz.playTone("c");
         wait_us(WAIT_TIME_MS * 1000);  //500ms
  greenLED = 1;
-        buzz.playTone("G");
+        buzz.playTone("g");
         wait_us(WAIT_TIME_MS * 1000);
 
          greenLED = 1;
-        buzz.playTone("Em");
+        buzz.playTone("am");
         wait_us(WAIT_TIME_MS * 1000);
 
          greenLED = 1;
