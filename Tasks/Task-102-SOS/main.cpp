@@ -22,13 +22,38 @@ int main()
     {
         //On for 500ms
         greenLED = 1;
-        buzz.playTone("C");
+        buzz.playTone("F");
         wait_us(WAIT_TIME_MS * 1000);  //500ms
+ greenLED = 1;
+        buzz.playTone("G");
+        wait_us(WAIT_TIME_MS * 1000);
 
+         greenLED = 1;
+        buzz.playTone("Em");
+        wait_us(WAIT_TIME_MS * 1000);
+
+         greenLED = 1;
+        buzz.playTone("Am");
+        wait_us(WAIT_TIME_MS * 1000);
 
         //Off for 500ms
         greenLED = 0;
-        buzz.playTone("C", Buzzer::HIGHER_OCTAVE);
+        buzz.playTone("F");
+        wait_us(WAIT_TIME_MS * 1000);  //500ms
+
+           //Off for 500ms
+        greenLED = 0;
+        buzz.playTone("G");
+        wait_us(WAIT_TIME_MS * 1000);  //500ms
+
+           //Off for 500ms
+        greenLED = 0;
+        buzz.playTone("E");
+        wait_us(WAIT_TIME_MS * 1000);  //500ms
+
+           //Off for 500ms
+        greenLED = 0;
+        buzz.playTone("Am");
         wait_us(WAIT_TIME_MS * 1000);  //500ms
 
         //Pause
