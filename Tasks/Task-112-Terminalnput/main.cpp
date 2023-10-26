@@ -10,7 +10,7 @@ DigitalOut led3(LED3);
 
 int main()
 {
-    printf("\nTASK-112\n");
+    printf("TASK-112");
 
     //getchar
     char c1, c2;
