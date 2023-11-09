@@ -1,52 +1,40 @@
-//#include "mbed.h"
 #include "uop_msb.h"
+#include "mbed.h"
 using namespace uop_msb;
 
-//On board LEDs
-DigitalOut led1(LED1);
-DigitalOut led2(LED2);
-DigitalOut led3(LED3);
+//output
+DigitalOut redLED(PC_2);
+DigitalOut yelLED(PC_3);
+DigitalOut greLED(PC_6);
 
-//On board switch
-DigitalIn BlueButton(USER_BUTTON);
+LatchedLED disp(LatchedLED::SEVEN_SEG);
 
-//LCD Display
-LCD_16X2_DISPLAY disp;
 
-//Buzzer
-Buzzer buzz;
-
-//Traffic Lights
-DigitalOut traf1RedLED(TRAF_RED1_PIN,1);
-DigitalOut traf1YelLED(TRAF_YEL1_PIN);
-DigitalOut traf1GrnLED(TRAF_GRN1_PIN);
-DigitalInOut traf2RedLED(TRAF_RED2_PIN, PIN_OUTPUT, OpenDrainNoPull, 0);
-DigitalInOut traf2YelLED(TRAF_YEL2_PIN, PIN_OUTPUT, OpenDrainNoPull, 1);
-DigitalInOut traf2GrnLED(TRAF_GRN2_PIN, PIN_OUTPUT, OpenDrainNoPull, 1);
-
-//Light Levels
-AnalogIn ldr(AN_LDR_PIN);
-
-//LCD Backlight
-DigitalOut backLight(LCD_BKL_PIN);
-
-int main()
-{
-    //LCD Backlight ON
-    backLight = 1;
-
-    while (true) {
-        led1 = 1;
-        led2 = 1;
-        led3 = 1;
-        wait_us(500000);
-        led1 = 0;
-        led2 = 0;
-        led3 = 0;  
-        wait_us(500000);    
-
-        disp.cls();
-        disp.printf("LDR: %0.3f", ldr.read());    
-    }
+int main(){
+disp.enable(true);
 }
 
+//int
+int count = 0;
+while(true){
+while (count < 4) { 
+    redLED = 1;
+wait_us(250000);
+redLED= 0;
+wait_us(250000);
+count = count + 1;
+}}
+
+//red led on
+redLED = 1;
+
+// wait
+wait_us(250000);
+
+//red led + yellow led on
+yellow LED = 1;
+
+//wait
+wait_us(250000);
+
+//green led on yellow led and red led off
