@@ -21,7 +21,7 @@ int main()
         {
             printf("count = %d\n", count);
             lights = count;
-            wait_us(1000000);
+            wait_us(250000);
 
             count = count - 1;
 
